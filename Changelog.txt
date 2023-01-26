@@ -1,0 +1,62 @@
+v1.0
+
+Features:
+
+-Mouse Button 5 = Auto Fire (ON/OFF)
+-F9 Close the program
+
+_______
+
+v 1.1
+
+Features:
+
+-Add F8 to Autogun ON/OFF
+(some people don't have Button 5 on mouse)
+
+Know issues:
+You cannot turn the autogun on/off while holding ctrl or shift, so make sure you are standing still while turning on/off 
+(i did fix that only for shoting, you can shot while pressing ctrl, shift, or ctrl + shift)
+
+_______
+
+v 1.2
+
+Features:
+
+-F7 turn sound ON/OFF (distinctive sound between auto-shot ON/OFF)
+-Better codding in general
+
+Fix:
+
+-Fixed turning ON/OFF while pressing SHIFT and CTRL
+
+Know issues:
+
+-You cannot turn ON/OFF while shooting, you have to stop pressing the left mouse button to turn ON/OFF.
+
+_______
+
+v 1.3
+
+Features:
+
+-F6 (ON/OFF, default ON) reload cancel on button R (by esc cancel, not melee cancel), 
+works with any weapon that can be canceled with 1100ms 
+(works on Assault Shotgun, Battle Rifle, Assault Carbine, Advanced SMG, Bullpup Rifle, 
+doesn't work with Light Automatic Rifle, Special SMG)
+
+
+v 1.4
+
+-Removed Shift + Reload Cancel
+-New Interface System on F5
+-Can Turn Hotkeys ON/OFF
+-Can select time for reload cancel
+-New cancel mode with melee
+-Can select hotkey for melee
+-Rename to WinterAutogun
+-New Autogun.ini with the saved configuration
+
+
+
