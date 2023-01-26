@@ -158,7 +158,7 @@ SaveIni:
     Sleep 1000
     IniWrite, %AutoGun%, Autogun.ini, Autogun, AutoGun
     IniWrite, %Sound%, Autogun.ini, Autogun, Sound
-    IniWrite, %SoundHK%, Autogun.ini, Autogun, --
+    IniWrite, %SoundHK%, Autogun.ini, Autogun, SoundHK
     IniWrite, %cancancel%, Autogun.ini, Autogun, cancancel
     IniWrite, %ChkMouse5%, Autogun.ini, Autogun, ChkMouse5
     IniWrite, %ChkF8%, Autogun.ini, Autogun, ChkF8
