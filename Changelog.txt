@@ -47,3 +47,16 @@ works with any weapon that can be canceled with 1100ms
 doesn't work with Light Automatic Rifle, Special SMG)
 
 
+v 1.4
+
+-Removed Shift + Reload Cancel
+-New Interface System on F5
+-Can Turn Hotkeys ON/OFF
+-Can select time for reload cancel
+-New cancel mode with melee
+-Can select hotkey for melee
+-Rename to WinterAutogun
+-New Autogun.ini with the saved configuration
+
+
+
