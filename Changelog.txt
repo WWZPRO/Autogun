@@ -46,8 +46,11 @@ works with any weapon that can be canceled with 1100ms
 (works on Assault Shotgun, Battle Rifle, Assault Carbine, Advanced SMG, Bullpup Rifle, 
 doesn't work with Light Automatic Rifle, Special SMG)
 
+_______
 
 v 1.4
+
+Features:
 
 -Removed Shift + Reload Cancel
 -New Interface System on F5
