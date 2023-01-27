@@ -61,5 +61,23 @@ Features:
 -Rename to WinterAutogun
 -New Autogun.ini with the saved configuration
 
+v 1.4.1
+
+Bugfix:
+
+-Autogun.ini ERROR fix
+
+v 1.4.2
+
+Bugfix:
+
+-Melee keystroke fix
+
+v 1.4.3
+
+Bugfix:
+
+-New code for Left Mouse Button to fix the freeze click bug
+
 
 
