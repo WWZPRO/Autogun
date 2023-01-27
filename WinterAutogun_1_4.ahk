@@ -48,10 +48,10 @@ AutoShot() {
             Send {LButton}
 	}
 	Else
-        Send {LButton}
-		;Sendinput {Blind}{LButton down}
-		;Sendinput {Blind}{LButton up}
-    Return
+		Sendinput {Blind}{LButton down}
+        KeyWait, LButton
+		Sendinput {Blind}{LButton up}
+        Return
 }
 
 FlipON() {
