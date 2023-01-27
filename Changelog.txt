@@ -79,5 +79,9 @@ Bugfix:
 
 -New code for Left Mouse Button to fix the freeze click bug
 
+V 1.4.4
 
+Bugfix:
+
+-Left Mouse Button back to original code
 
