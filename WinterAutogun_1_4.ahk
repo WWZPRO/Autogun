@@ -103,7 +103,7 @@ useron() {
     Gui, Add, CheckBox, y+10 cBlue Checked%SoundHK% vSoundHK gSubmit_All, ` Hotkey F7 to Sound?
     Gui, Add, CheckBox, y+50 cGreen Checked%cancancel% vcancancel gSubmit_All, ` Reload Cancel?
     Gui, Add, CheckBox, y+10 Checked%cancelbyesc% vcancelbyesc gSubmit_All, ` Cancel by Esc (True) or Melee (False)?
-    Gui, Add, Edit, r1 y+10 vmelee gSubmit_All, F
+    Gui, Add, Edit, r1 y+10 vmelee gSubmit_All, %melee%
     Gui, Add, Text, x+10, ` Type your Melee Keystoke
     Gui, Add, Edit, Number y+10 vrtime gSubmit_All, %rtime%
     Gui, Add, Text, x+10, ` Reload time before cancel in ms (default 1100)
