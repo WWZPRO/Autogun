@@ -45,12 +45,12 @@ IniRead, AutoGunIni, Autogun.ini, Autogun
 AutoShot() {
 	If (AutoGun) {
 		While GetKeyState("LButton","P")
-            Click
+            Send {LButton}
 	}
 	Else
-		Sendinput {Blind}{LButton down}
-		KeyWait, LButton
-		Sendinput {Blind}{LButton up}
+        Send {LButton}
+		;Sendinput {Blind}{LButton down}
+		;Sendinput {Blind}{LButton up}
     Return
 }
 
@@ -132,8 +132,8 @@ useron() {
 ~$R::(cc ? (cR()): )
 ~$^R::(cc ? (cR()): )
 
-F5::useron()
-F6::cancancel := !cancancel
+~$F5::useron()
+~$F6::cancancel := !cancancel
 ~$F7::(SoundHK?Sound := !Sound:)
 F9::ExitApp
 
