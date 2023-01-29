@@ -152,11 +152,10 @@ useron() {
 }
 
 wr(t) {
-    Gui, Submit, NoHide
+    Gui, Submit
         For each, n in weapcustom
             If (Weap%t%%A_Index% > 0)
                 rtime := weapcustom[A_Index].ReloadTime 
-    useron()
     Return
 }
 
