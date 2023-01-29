@@ -1,5 +1,6 @@
 Important only work on Windows
 
+F5 Main Menu
 F9 closes the app
 F8 turn ON/OFF the autogun
 Mouse Button 5 Tturn ON/OFF autogun
