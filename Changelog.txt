@@ -79,9 +79,28 @@ Bugfix:
 
 -New code for Left Mouse Button to fix the freeze click bug
 
-V 1.4.4
+v 1.4.4
 
 Bugfix:
 
 -Left Mouse Button back to original code
+
+v 1.5
+
+Features:
+
+-Weapon List with all optimized reload time
+-New customizable Hotkey to open the Weapon List
+-F5 now opens and closes the Main Menu
+-New button to close the Autogun App
+
+
+Bugfix:
+
+-Fix Left Mouse Button problem
+
+Limitations:
+
+-Can't customize weapons bullets and reload time yet
+-One Click Autoshot untill magazine is empty not done yet
 
