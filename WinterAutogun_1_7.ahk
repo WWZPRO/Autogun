@@ -18,7 +18,7 @@ global weaponlist := [{Name: "Assault Shotgun", ReloadTime: "1100", Bullets: 20,
 ;================== Global Variables ==================
 
 
-global AutoGun := True
+global AutoGun := False
 global Sound := False
 global SoundHK := True
 global cancancel := True
@@ -38,7 +38,7 @@ global rts := {}
 ;================== SET VARIABLES FROM .INI ==================
 
 
-IniRead, AutoGun, Autogun.ini, Autogun, AutoGun, True
+IniRead, AutoGun, Autogun.ini, Autogun, AutoGun, False
 IniRead, Sound, Autogun.ini, Autogun, Sound, False
 IniRead, SoundHK, Autogun.ini, Autogun, SoundHK, True
 IniRead, cancancel, Autogun.ini, Autogun, cancancel, True
