@@ -136,6 +136,7 @@ v 1.7.0
 Features:
 
 -New Improved Weapon Window organized by reload cancel time, not by weapon type
+-Removed the Save Weapons Button
 
 _______
 
