@@ -61,11 +61,15 @@ Features:
 -Rename to WinterAutogun
 -New Autogun.ini with the saved configuration
 
+_______
+
 v 1.4.1
 
 Bugfix:
 
 -Autogun.ini ERROR fix
+
+_______
 
 v 1.4.2
 
@@ -73,17 +77,23 @@ Bugfix:
 
 -Melee keystroke fix
 
+_______
+
 v 1.4.3
 
 Bugfix:
 
 -New code for Left Mouse Button to fix the freeze click bug
 
+_______
+
 v 1.4.4
 
 Bugfix:
 
 -Left Mouse Button back to original code
+
+_______
 
 v 1.5
 
@@ -94,7 +104,6 @@ Features:
 -F5 now opens and closes the Main Menu
 -New button to close the Autogun App
 
-
 Bugfix:
 
 -Fix Left Mouse Button problem
@@ -104,11 +113,15 @@ Limitations:
 -Can't customize weapons bullets and reload time yet
 -One Click Autoshot untill magazine is empty not done yet
 
+_______
+
 v 1.5.1
 
 Bugfix:
 
 -Choosing a weapon will automatic close all menu windows
+
+_______
 
 v 1.6     
 
@@ -116,3 +129,18 @@ Bugfix:
 
 -All weapons reload time increased
 
+_______
+
+v 1.7.0
+
+Features:
+
+-New Improved Weapon Window organized by reload cancel time, not by weapon type
+
+_______
+
+v 1.7.1
+
+Features:
+
+-Autogun set default to OFF (after opening the app)
