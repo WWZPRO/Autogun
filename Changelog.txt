@@ -110,3 +110,9 @@ Bugfix:
 
 -Choosing a weapon will automatic close all menu windows
 
+v 1.6     
+
+Bugfix:
+
+-All weapons reload time increased
+
