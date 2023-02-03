@@ -104,3 +104,9 @@ Limitations:
 -Can't customize weapons bullets and reload time yet
 -One Click Autoshot untill magazine is empty not done yet
 
+v 1.5.1
+
+Bugfix:
+
+-Choosing a weapon will automatic close all menu windows
+
