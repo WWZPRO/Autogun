@@ -136,26 +136,24 @@ cR() {
 }
 
 cbt() {
-    If (WWZOpen()) {
-        If (cancelbyesc){
-            Send {Esc} 
-        }
-        Else {
-            Send {%melee%}
-        }
+    If (cancelbyesc){
+        Send {Esc} 
+    }
+    Else {
+        Send {%melee%}
     }
 }
 
 
 wr() {
-        Gui, Submit
-            For n, l in rts {
-                If (WeapP%n% > 0) {
-                    rtime := n 
-                }
+    Gui, Submit
+        For n, l in rts {
+            If (WeapP%n% > 0) {
+                rtime := n 
             }
-        GuiControl,, %MyReload%, %rtime%
-        Return
+        }
+    GuiControl,, %MyReload%, %rtime%
+    Return
 }
 
 createnewfirst(){
