@@ -144,4 +144,17 @@ v 1.7.1
 
 Features:
 
--Autogun set default to OFF (after opening the app)
+-Autogun set default to OFF (after opening the app)'
+
+
+v 1.8.0
+
+Features:
+
+-New First Time Screen Configuration
+-New Tutorial How To Use
+-Checkbox to only work when WWZ window is activated (Default = True) 
+-R button can be replaced by any hotkey
+-Weapons Reload Time Update in Real Time after chosing on Weapon Selection
+-New Hotkey Selection Window
+
