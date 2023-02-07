@@ -146,6 +146,7 @@ Features:
 
 -Autogun set default to OFF (after opening the app)'
 
+_______
 
 v 1.8.0
 
@@ -158,3 +159,10 @@ Features:
 -Weapons Reload Time Update in Real Time after chosing on Weapon Selection
 -New Hotkey Selection Window
 
+_______
+
+v 1.8.1
+
+Bugfix:
+
+-Reload Selection on Weapon Selection bug fixed
