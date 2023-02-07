@@ -166,3 +166,11 @@ v 1.8.1
 Bugfix:
 
 -Reload Selection on Weapon Selection bug fixed
+
+_______
+
+v 1.8.2
+
+Bugfix:
+
+-Reload Cancel was activating more than once
