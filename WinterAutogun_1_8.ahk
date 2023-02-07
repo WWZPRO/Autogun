@@ -148,7 +148,6 @@ cbt() {
 
 
 wr() {
-    If (WWZOpen()) {
         Gui, Submit
             For n, l in rts {
                 If (WeapP%n% > 0) {
@@ -157,7 +156,6 @@ wr() {
             }
         GuiControl,, %MyReload%, %rtime%
         Return
-    }
 }
 
 createnewfirst(){
