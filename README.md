@@ -1,11 +1,10 @@
 # !!! Important only work on Windows !!!
 
-### F5 Main Menu
-### F9 Closes the App
-### F8 Turn ON/OFF the Autogun
-### Mouse Button 5 Tturn ON/OFF Autogun
-### F7 Turn Sound ON/OFF
-### F6 Turn Reload Cancel ON/OFF
+### F5 - Main Menu
+### F9 - Closes the App
+### F8 or Mouse Button 5 - Turn ON/OFF the Autogun
+### F7 - Turn Sound ON/OFF
+### F6 - Turn Reload Cancel ON/OFF
 
 # FAQ 
 _____
