@@ -141,6 +141,7 @@ v1.7.1
 Features:
 
 -Autogun set default to OFF (after opening the app)
+
 _______
 
 v1.8.0
