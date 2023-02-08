@@ -13,8 +13,6 @@ F6 turn reload cancel ON/OFF
 ### F7 Turn Sound ON/OFF
 ### F6 Turn Reload Cancel ON/OFF
 
-If you find trouble clicking, turn autogun off (F8 or Mouse Button 5)
-If you find trouble pressing R, turn auto reload off by pressing F6
 # FAQ 
 _____
 
