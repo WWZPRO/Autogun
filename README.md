@@ -16,14 +16,19 @@ F6 turn reload cancel ON/OFF
 If you find trouble clicking, turn autogun off (F8 or Mouse Button 5)
 If you find trouble pressing R, turn auto reload off by pressing F6
 # FAQ 
+_____
 
 ## 1. My mouse is selecting everything, and i cannot double click, what should i do?
 
 ### If you find trouble clicking, turn Autogun OFF (F8 or Mouse Button 5, or in the F5 Main Menu)
 
+_____
+
 ## 2. My keyboard is acting strange and sending different keys
 
 ### Your Cancel Reload should be activated and sending the Melee Key or ESC Key, turn Cancel Reload OFF by pressing F6 (or in the F5 Main Menu)
+
+_____
 
 ## 3. Im hearing some strange noises when i turn Autogun ON/OFF
 
