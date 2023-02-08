@@ -1,26 +1,30 @@
-v1.8.0
+# !!! Important only work on Windows !!!
 
-Features:
+F5 Main Menu
+F9 closes the app
+F8 turn ON/OFF the autogun
+Mouse Button 5 Tturn ON/OFF autogun
+F7 turn sound ON/OFF
+F6 turn reload cancel ON/OFF
+### F5 Main Menu
+### F9 Closes the App
+### F8 Turn ON/OFF the Autogun
+### Mouse Button 5 Tturn ON/OFF Autogun
+### F7 Turn Sound ON/OFF
+### F6 Turn Reload Cancel ON/OFF
 
--New First Time Screen Configuration
--New Tutorial How To Use
--Checkbox to only work when WWZ window is activated (Default = True) 
--R button can be replaced by any hotkey
--Weapons Reload Time Update in Real Time after choosing on Weapon Selection
--New Hotkey Selection Window
+If you find trouble clicking, turn autogun off (F8 or Mouse Button 5)
+If you find trouble pressing R, turn auto reload off by pressing F6
+# FAQ 
 
-_______
+## 1. My mouse is selecting everything, and i cannot double click, what should i do?
 
-v1.8.1
+### If you find trouble clicking, turn Autogun OFF (F8 or Mouse Button 5, or in the F5 Main Menu)
 
-Bugfix:
+## 2. My keyboard is acting strange and sending different keys
 
--Reload Selection on Weapon Selection bug fixed
+### Your Cancel Reload should be activated and sending the Melee Key or ESC Key, turn Cancel Reload OFF by pressing F6 (or in the F5 Main Menu)
 
-_______
+## 3. Im hearing some strange noises when i turn Autogun ON/OFF
 
-v1.8.2
-
-Bugfix:
-
--Reload Cancel was activating more than once
+### You can turn Sound ON/OFF by pressing F7 (or in the F5 Main Menu)
