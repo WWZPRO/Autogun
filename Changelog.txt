@@ -170,3 +170,32 @@ v1.8.2
 Bugfix:
 
 -Reload Cancel was activating more than once
+
+_______
+
+v1.9.0 (Unreleased)
+
+Features:
+
+-New Hotkey System (can chose new keys or even control buttons)
+
+Bugfix:
+
+-Resize Button Weapon Selection in the Main Menu
+-Fix a crouch bug when shoting
+
+_______
+
+v1.10.0
+
+Features:
+
+-Improved Mouse Button (Reliability and Fire Rate)
+-Improved Reload Cancel by Esc Delay Time (by Default)
+-User can choose the Cancel By Esc Delay Time
+-Reload Cancel changed to 1110 (by Default)
+-My Twitch Channel new Link Updated
+
+Bugfix:
+
+-Reload Cancel Time can be changed on the edit box again (must hit Save Button now)

@@ -11,11 +11,11 @@
 ;================== OBJECTS ==================
 
 
-global weaponlist := [{Name: "Assault Shotgun", ReloadTime: "1100", Bullets: 20, Type:"T3"},{Name: "Advanced Combat Weapon", ReloadTime: "1100", Bullets: 15, Type:"T3"},{Name: "Assault Carbine", ReloadTime: "1100", Bullets: 60, Type:"T3"},{Name: "Light Automatic Weapon", ReloadTime: "4400", Bullets: 125, Type:"T2"},{Name: "Goncho Mark II", ReloadTime: "600", Bullets: 3, Type:"T3"},{Name: "Battle Riffle", ReloadTime: "1100", Bullets: 25, Type:"T3"},{Name: "Bullpup Riffle", ReloadTime: "1100", Bullets: 45, Type:"T3"},{Name: "Sniper Riffle", ReloadTime: "1100", Bullets: 30, Type:"T2"},{Name: "Advanced SMG", ReloadTime: "1100", Bullets: 60, Type:"T3"},{Name: "Special SMG", ReloadTime: "1250", Bullets: 40, Type:"T3"},{Name: "Crossbow", ReloadTime: "1025", Bullets: 5, Type:"T3"},{Name: "Assault Rifle", ReloadTime: "1100", Bullets: 50, Type:"T2"},{Name: "Sporting Carbine", ReloadTime: "1000", Bullets: 30, Type:"T2"},{Name: "Classic Battle Rifle", ReloadTime: "1100", Bullets: 30, Type:"T2"},{Name: "Classic Bullpup Riffle", ReloadTime: "1300", Bullets: 42,Type:"T2"},{Name: "SMG", ReloadTime: "1150", Bullets: 50, Type:"T2"},{Name: "Combat Shotgun",ReloadTime: "1000", Bullets: 12, Type:"T2"},{Name: "Scout Riffle", ReloadTime: "1025", Bullets: 30, Type:"T1"},{Name: "Compact SMG", ReloadTime: "1150", Bullets: 48, Type:"T1"},{Name: "Shotgun", ReloadTime: "900", Bullets: 12, Type:"T1"},{Name: "Pistol", ReloadTime: "750", Bullets: 20, Type:"S"},{Name: "Machine Pistol", ReloadTime: "700", Bullets: 30, Type:"S"},{Name: "PDW", ReloadTime: "1000", Bullets: 40, Type:"S"},{Name: "Compact Shotgun", ReloadTime: "900", Bullets: 4, Type:"S"},{Name: "Double Barrel Shotgun", ReloadTime: "750", Bullets: 2, Type:"S"},{Name: "Revolver", ReloadTime: "1050", Bullets: 6, Type:"S"},{Name: "Grenade Launcher", ReloadTime: "675", Bullets: 1, Type:"S"}]
+global weaponlist := [{Name: "Assault Shotgun", ReloadTime: "1100", Bullets: 20, Type:"T3"},{Name: "Advanced Combat Weapon", ReloadTime: "1100", Bullets: 15, Type:"T3"},{Name: "Assault Carbine", ReloadTime: "1100", Bullets: 60, Type:"T3"},{Name: "Light Automatic Weapon", ReloadTime: "4400", Bullets: 125, Type:"T2"},{Name: "Goncho Mark II", ReloadTime: "600", Bullets: 3, Type:"T3"},{Name: "Battle Riffle", ReloadTime: "1100", Bullets: 25, Type:"T3"},{Name: "Bullpup Riffle", ReloadTime: "1100", Bullets: 45, Type:"T3"},{Name: "Sniper Riffle", ReloadTime: "1100", Bullets: 30, Type:"T2"},{Name: "Advanced SMG", ReloadTime: "1100", Bullets: 60, Type:"T3"},{Name: "Special SMG", ReloadTime: "1250", Bullets: 40, Type:"T3"},{Name: "Crossbow", ReloadTime: "1025", Bullets: 5, Type:"T3"},{Name: "Assault Rifle", ReloadTime: "1100", Bullets: 50, Type:"T2"},{Name: "Sporting Carbine", ReloadTime: "1000", Bullets: 30, Type:"T2"},{Name: "Classic Battle Rifle", ReloadTime: "1100", Bullets: 30, Type:"T2"},{Name: "Classic Bullpup Riffle", ReloadTime: "1300", Bullets: 42,Type:"T2"},{Name: "SMG", ReloadTime: "1150", Bullets: 50, Type:"T2"},{Name: "Combat Shotgun",ReloadTime: "1000", Bullets: 12, Type:"T2"},{Name: "Scout Riffle", ReloadTime: "1100", Bullets: 30, Type:"T1"},{Name: "Compact SMG", ReloadTime: "1150", Bullets: 48, Type:"T1"},{Name: "Shotgun", ReloadTime: "900", Bullets: 12, Type:"T1"},{Name: "Pistol", ReloadTime: "850", Bullets: 20, Type:"S"},{Name: "Machine Pistol", ReloadTime: "700", Bullets: 30, Type:"S"},{Name: "PDW", ReloadTime: "1000", Bullets: 40, Type:"S"},{Name: "Compact Shotgun", ReloadTime: "900", Bullets: 4, Type:"S"},{Name: "Double Barrel Shotgun", ReloadTime: "750", Bullets: 2, Type:"S"},{Name: "Revolver", ReloadTime: "1050", Bullets: 6, Type:"S"},{Name: "Grenade Launcher", ReloadTime: "675", Bullets: 1, Type:"S"}]
 
 
 
-;================== Global Variables ==================
+;================== Global Variables ==================ShowWeaps
 
 
 global wwzo := True
@@ -30,7 +30,7 @@ global ChkMouse5 := True
 global ChkF8 := True
 global cancelbyesc := True 
 global melee := "F"
-global rtime := 1100
+global rtime := 1110
 global AutoGunIni := ""
 global hkweap := "F10"
 global weapcustom := weaponlist
@@ -43,6 +43,7 @@ global reloadselector := 0
 global fastselector := 0
 global newfirst := 1
 global MyReload := ""
+global menucancel := 110
 
 
 ;================== SET VARIABLES FROM .INI ==================
@@ -67,6 +68,7 @@ Else {
     IniRead, hkweap, Autogun.ini, Autogun, hkweap, "F10"
     IniRead, AutoGunIni, Autogun.ini, Autogun
     IniRead, hkreload, Autogun.ini, Autogun, hkreload, "R"
+    IniRead, menucancel, Autogun.ini, Autogun, menucancel, 110
 }
 
 ;================== MAIN ==================
@@ -94,7 +96,7 @@ AutoShot() {
     If (WWZOpen()) {
         If (AutoGun) {
             While GetKeyState("LButton","P")
-                Send {LButton}
+                Sendinput {LButton}               
         }
         Else {
             Sendinput {Blind}{~$LButton down}
@@ -126,9 +128,9 @@ cR() {
             cc := False
             Sleep %rtime%
             cbt()
-            Sleep 100
+            Sleep %menucancel%
             cbt()
-            Sleep 300
+            Sleep 1
             cc := True
         }
         Return
@@ -137,10 +139,10 @@ cR() {
 
 cbt() {
     If (cancelbyesc){
-        Send {Esc} 
+        Sendinput {Esc} 
     }
     Else {
-        Send {%melee%}
+        Sendinput {%melee%}
     }
 }
 
@@ -172,6 +174,24 @@ createnewfirst(){
     Gui, Show
 }
 
+
+Set_HK(n){
+    If (meleeselector) {
+            melee := n
+        }
+        Else If (reloadselector) {
+            hkreload := n
+            Gosub, AssignHKR
+        }
+        Else If (fastselector) {
+            hkweap := n
+            Gosub, AssignHKW
+        }
+    meleeselector := 0
+    reloadselector := 0
+    fastselector := 0
+}
+
 ;================== BUTTONS ==================
 
 
@@ -198,9 +218,9 @@ FastHK:
     Return
 
 ShowWeaps:
-    Gui, weap:New
+    Gui, weap:New,,Weapon Selection
     Gui, Font, s12
-    Gui, -Border -SysMenu +Owner -Caption +ToolWindow
+    ;Gui, +Border -SysMenu +Owner -Caption +ToolWindow
     oy := 32
     py := 13
     gby := 5
@@ -291,6 +311,7 @@ SaveIni:
     IniWrite, %rtime%, Autogun.ini, Autogun, rtime
     IniWrite, %hkweap%, Autogun.ini, Autogun, hkweap
     IniWrite, %hkreload%, Autogun.ini, Autogun, hkreload
+    IniWrite, %menucancel%, Autogun.ini, Autogun, menucancel
     Sleep 100
     Return
 
@@ -327,12 +348,6 @@ Focus_Fast:
 Exit_All:
     ExitApp
 
-Test_1:
-    Gosub, showkeys
-    If (keyselected != ""){
-        melee := keyselected
-    }
-    Return
 
 NotSubmit:
     Gui, Submit
@@ -344,31 +359,30 @@ SetKeySelected:
         key1 = hkb%m%
         key2 = %A_GuiControl%  
         If (key2 = key1) {    
-            If (meleeselector) {
-                melee := n
+            Set_HK(n)
+            WinClose, AutogunOptions
+            if (newfirst) {
+                createnewfirst()
             }
-            Else If (reloadselector) {
-                hkreload := n
-                Gosub, AssignHKR
+            Else {
+                Gosub, useron
             }
-            Else If (fastselector) {
-                hkweap := n
-                Gosub, AssignHKW0
-            }
-        meleeselector := 0
-        reloadselector := 0
-        fastselector := 0
-        WinClose, AutogunOptions
-        if (newfirst) {
-            createnewfirst()
-        }
-        Else {
-            Gosub, useron
-        }
         }
     } 
     Return
 
+
+NewHKSytem:
+    Gui, Submit
+    Set_HK(HKbt)
+    WinClose, AutogunOptions
+    if (newfirst) {
+        createnewfirst()
+    }
+    Else {
+        Gosub, useron
+    }
+    Return
 
 
 useron:
@@ -380,7 +394,7 @@ useron:
         Gui, Font, s12
         Gui, Add, Button, y20 x20 gExit_All,  Close Autogun App
         Gui, Font, s20    
-        Gui, Add, Link, x35 , Check my <a href="https://www.twitch.tv/legiox_wintersky">Twitch Channel</a>
+        Gui, Add, Link, x35 , Check my <a href="https://www.twitch.tv/wintersky_legendary">Twitch Channel</a>
         Gui, Add, Link, x35 , Source <a href="https://github.com/WWZPRO/Autogun">GitHub</a>
         Gui, Add, Text, y+20 , Autogun Settings:
         Gui, Add, CheckBox, x35 y+25 cBlue Checked%ChkMouse5% vChkMouse5 gSubmit_All, ` Hotkey Mouse Button 5 to Turn ON/OFF Autogun?
@@ -389,20 +403,27 @@ useron:
         Gui, Add, CheckBox, y+20 cGreen Checked%Sound% vSound gSubmit_All, ` Sound for turn ON/OFF Autogun?
         Gui, Add, CheckBox, y+10 cBlue Checked%SoundHK% vSoundHK gSubmit_All, ` Hotkey F7 to Sound?
         Gui, Add, CheckBox, y+20 cGreen Checked%cancancel% vcancancel gSubmit_All, ` Reload Cancel?
-        Gui, Add, CheckBox, y+10 cGreen Checked%cancelbyesc% vcancelbyesc gSubmit_All, ` Cancel by Esc (True) or Melee (False)?
+        Gui, Add, Edit, x+100 vmenucancel, %menucancel%
+        Gui, Font, s10   
+        Gui, Add, Text, x+10, (Esc cancel in Miliseconds)
+        Gui, Font, s12   
+        Gui, Add, Button, w60 h30 x+10 gSubmit_All, SAVE
+        Gui, Font, s20   
+        Gui, Add, CheckBox, x35 y+30 cGreen Checked%cancelbyesc% vcancelbyesc gSubmit_All, ` Cancel by Esc (True) or Melee (False)?
         Gui, Add, Button, w170 h40 y+10 vmelee gFocus_Melee, %melee%
         Gui, Add, Text, x+30, ` Select your Melee Key
         Gui, Add, Button, w170 h40 y+10 x35 vhkreload gFocus_Reload, %hkreload%
         Gui, Add, Text, x+30, ` Select your Reload Key
-        Gui, Add, Edit, w80 Number y+15 x35 vrtime HwndMyReload gSubmit_All, %rtime%        
-        GuiControl, +v%MyReload%, Edit1
-        Gui, Add, Text, x+10, ` Reload time before cancel in ms (default 1100)
-        Gui, Add, Button, gShowWeaps, Weapon Selection
-        Gui, Add, Button, w70 h40 y+30 x35 vhkweap gFocus_Fast, %hkweap%
+        Gui, Add, Edit, w80 Number y+15 x35 vrtime HwndMyReload, %rtime%        
+        ;GuiControl, +v%MyReload%, Edit1
+        Gui, Add, Button, w10 x+10 gSubmit_All, SAVE
+        Gui, Add, Text, x+10, ` Reload time before cancel in ms (default 1110)
+        Gui, Add, Button, x10 y+30 gShowWeaps, Weapon Selection
+        Gui, Add, Text, x+10, ` Select a Hotkey to fast select your `n weapons to get the auto time reload cancel  
+        Gui, Add, Button, w170 h40 y+30 x35 vhkweap gFocus_Fast, %hkweap%
         GuiControlget, vhkweap, FocusV
         Gui, Add, Text, x+10, ` Hotkey to open Weapon Selection
         Gui, Add, Button, y+25 x5 gRemoveHK, Delete Hotkey
-        Gui, Add, Text, x+10, ` Select a Hotkey to fast select your weapons `n to get the auto time reload cancel   
         Gui, Font, s10Gui, Add, Text, y+5 x5, ` (if this hotkey bugs, you have to close this app and open again)
         Gui, Add, CheckBox, y+20 cRed Checked%wwzwme% vwwzwme gSubmit_All, ` WWZ Client must be open to work?
         Gui, Font, s30
@@ -419,7 +440,7 @@ useron:
 
 showkeys: 
     Gui, kkeys:New,, Keys Avaliable
-    Gui, -Border -SysMenu +Owner -Caption +ToolWindow
+    ;Gui, -Border -SysMenu +Owner -Caption +ToolWindow
     Gui, Font, s40
     Gui, Add, Text, cRed x250 y30, Select a Hotkey
     Gui, Font, s20
@@ -434,6 +455,7 @@ showkeys:
             GuiControl, Disable, hkb%ib%
         }
     }
+    Gui, Add, Hotkey, x20 y+10 vHKbt gNewHKSytem
     Gui, Add, Button, x350 y+50 h80 w200 gNotSubmit , Cancel
     Gui, Show
     Return
